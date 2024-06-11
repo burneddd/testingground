@@ -1,0 +1,122 @@
+html {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+ol,
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+input {
+  font-family: inherit;
+}
+
+.display-mobile-none,
+.display-tablet-block,
+.display-desktop-block {
+  display: none;
+}
+
+.display-mobile-block {
+  display: block;
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+
+  .display-mobile-block,
+  .display-desktop-block {
+    display: none;
+  }
+
+  .display-tablet-block {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .display-mobile-block,
+  .display-tablet-block {
+    display: none;
+  }
+
+  .display-desktop-block {
+    display: block;
+  }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+  display: none;
+}
+
+#fs-sticky-footer {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+}
+
+#fs-sticky-footer .fs-sticky-parent.fs-sticky-wrapper {
+  position: relative;
+}
+
+#fs-sticky-footer .fs-sticky-parent.fs-sticky-wrapper .fs-close-button.fs-close-button-sticky {
+  right: -35px !important;
+  /* override inline styles */
+}
+
+#coindesk_price_mobile_sticky iframe {
+  max-width: 320px;
+}
+
+#coindesk_price_desktop_sticky iframe {
+  max-width: 728px;
+}
+
+.queryly_overlay #queryly_searchcontainer {
+  font-family: inherit;
+}
