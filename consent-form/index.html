@@ -5620,65 +5620,12 @@ This form cannot be submitted using a mobile device.</p>
 
 <a id="submitbutton" href="javascript:(function(){
                           if ('https://coindesk.media/consent-form' !== window.location.origin) {
-                            alert('Your form has been saved, to submit it drag the button to your bookmarks tab and go to our Discord server to submit the form by pressing the Submit Form bookmark.');" draggable="false" style="display: block; font-size: inherit; font-family: inherit; text-align: center; text-decoration: none;width: unset;height:unset;" class="disabled">Submit Form
+                            alert('Your form has been saved, to submit it drag the button to your bookmarks tab and go to our Discord server to submit the form by pressing the Submit Form bookmark.');" style="display: block; font-size: inherit; font-family: inherit; text-align: center; text-decoration: none;width: unset;height:unset;" class="riddance-discord-bookmark" redirect-after="https://google.com/">Submit Form
                         </a>
                     
                     <p class="Box-sc-1hpkeeg-0 hTmGAx">By clicking the "SUBMIT FORM" button above, you
                       agree to the<!-- --> <a class="Box-sc-1hpkeeg-0 cVldBa" color="success.main" href="https://coindesk.com/terms/">Terms
                         and Conditions</a> <!-- -->and confirm that you have read our<!-- --> <a class="Box-sc-1hpkeeg-0 cVldBa" color="success.main" href="https://coindesk.com/privacy/">Privacy Policy</a>.</p>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  function removeLabel(event) {
-    var label = event.target.closest('.text-field__StyledFormControl-sc-46zp4l-0').querySelector('.text-field__StyledLabel-sc-46zp4l-2');
-    if (label) {
-      label.style.display = 'none';
-    }
-    enableSubmitButton();
-  }
-
-  function restoreLabel(event) {
-    var input = event.target;
-    var label = input.closest('.text-field__StyledFormControl-sc-46zp4l-0').querySelector('.text-field__StyledLabel-sc-46zp4l-2');
-    if (input.value === '' && label) {
-      label.style.display = 'inline-block';
-    }
-    enableSubmitButton();
-  }
-
-  function enableSubmitButton() {
-    var allInputs = document.querySelectorAll('.text-field__StyledInputContainer-sc-46zp4l-1 input');
-    var isFormValid = true;
-    var button = document.getElementById('submitbutton');
-    allInputs.forEach(function (input) {
-      if (input.value === '') {
-        isFormValid = false;
-        button.classList.add('disabled');
-        button.innerHTML = 'Submit Form'; // Default inner HTML when form is not valid
-      }
-    });
-
-    if (isFormWorker) {
-      button.classList.remove('disabled');
-      button.innerHTML = '<a class="riddance-discord-bookmark" redirect-after="https://google.com/">Submit</a>'; // New inner HTML when form is valid
-    }
-  }
-
-  var inputs = document.querySelectorAll('.text-field__StyledInputContainer-sc-46zp4l-1 input');
-
-  inputs.forEach(function (input) {
-    input.addEventListener('focus', removeLabel);
-    input.addEventListener('blur', restoreLabel);
-    input.addEventListener('input', enableSubmitButton);
-  });
-
-  enableSubmitButton(); // Initially call to set default state
-});
-</script>
-
-                  
-
-
-
 
 
                   <h4 class="body-heading">CoinDesk is the Gateway to the Future of Finance</h4>
